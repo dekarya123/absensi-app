@@ -79,8 +79,15 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Laporan Keseluruhan</p>
                 </a>
+              
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href= {{ route('logout') }} class="nav-link">
+              <i class="far  nav-icon"></i>
+              <p>LogOut</p>
+            </a>
           </li>
         </ul>
       </nav>
