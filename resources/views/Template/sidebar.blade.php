@@ -34,6 +34,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+          @if (auth()->user()->level == "karyawan")
           <li class="nav-item menu-open">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -57,8 +58,9 @@
               </li>
             </ul>
           </li>
+          @endif
 
-
+          @if (auth()->user()->level == "admin")
           <li class="nav-item menu-open">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -83,6 +85,7 @@
               </li>
             </ul>
           </li>
+          @endif
           <li class="nav-item">
             <a href= {{ route('logout') }} class="nav-link">
               <i class="far  nav-icon"></i>
